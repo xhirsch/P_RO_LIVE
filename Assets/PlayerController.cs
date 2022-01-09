@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update() {
     Vector2 move = playerControls.Gameplay.Move.ReadValue<Vector2>();
-    //Debug.Log(move);
+    // Debug.Log(move);
     float grow = playerControls.Gameplay.Grow.ReadValue<float>();
     Debug.Log(grow);
     }
