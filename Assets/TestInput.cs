@@ -17,7 +17,11 @@ public class TestInput : MonoBehaviour
         
     }
 
-    private void OnMove(InputValue value){
-        Debug.Log(value.Get<float>()); 
+    private void OnSceneNext(InputValue value){
+        Debug.Log("Scene Next" + value.Get<float>()); 
+    }
+
+    private void OnSceneBack(InputValue value){
+        Debug.Log("Scene Back" + value.Get<float>()); 
     }
 }
