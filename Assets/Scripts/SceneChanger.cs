@@ -16,12 +16,18 @@ public class SceneChanger : MonoBehaviour
     }
 
     private void OnSceneNext(InputValue value){
-        Debug.Log("Scene Next" + value.Get<float>());
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+        if(SceneManager.GetActiveScene().buildIndex < SceneManager.sceneCountInBuildSettings - 1) {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        
     }
 
     private void OnSceneBack(InputValue value){
-        Debug.Log("Scene Back" + value.Get<float>());
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+
+        if(SceneManager.GetActiveScene().buildIndex > 0) {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
+        }
+        
 }
