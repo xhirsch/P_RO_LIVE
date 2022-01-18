@@ -11,6 +11,7 @@
 /[Mm]emoryCaptures/
 /[Uu]ser[Ss]ettings/
 /[Uu]ser[Ss]ettings/Layouts
+/[Uu]ser[Ss]ettings/Layouts/default-2022.dwlt
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
