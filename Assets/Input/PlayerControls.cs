@@ -53,24 +53,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""SceneNext"",
-                    ""type"": ""Button"",
-                    ""id"": ""3ae2206c-f3bf-4ce0-a843-668710bdeaab"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""SceneBack"",
-                    ""type"": ""Button"",
-                    ""id"": ""d36b4514-4c87-4014-98c5-374c160bb5ab"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -104,50 +86,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Rotate"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""54f24c0b-23e7-44bc-9b24-e7b496c3a512"",
-                    ""path"": ""<Gamepad>/rightShoulder"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""SceneNext"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""88d51a2c-95d9-4528-a573-f139c53b34f7"",
-                    ""path"": ""<Keyboard>/2"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""SceneNext"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""d6e3a9b8-6a57-4ab3-8dfc-919207044332"",
-                    ""path"": ""<Gamepad>/leftShoulder"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""SceneBack"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""0ec37a90-f0f1-4fb0-ae6a-e70896fe18a7"",
-                    ""path"": ""<Keyboard>/1"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""SceneBack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -202,6 +140,76 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 }
             ]
+        },
+        {
+            ""name"": ""UI"",
+            ""id"": ""851099b4-6408-4425-98ae-f8e059e93acd"",
+            ""actions"": [
+                {
+                    ""name"": ""SceneNext"",
+                    ""type"": ""Button"",
+                    ""id"": ""a5689f7e-3b0d-4d67-a87a-966eb3b965e7"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""SceneBack"",
+                    ""type"": ""Button"",
+                    ""id"": ""0de3639a-0570-4e62-b194-9633149a16a3"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""e82b790e-50ce-40b2-b7bc-e21dbe44c7b5"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SceneNext"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6bc0cac0-493e-45ff-a01b-d0a723f8aad3"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SceneNext"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""42b40689-e50b-4b98-abb0-62b6c2e056be"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SceneBack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4cfabd71-8434-45a7-ab59-335b2aaa73d4"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SceneBack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -211,11 +219,13 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         m_Gameplay_Grow = m_Gameplay.FindAction("Grow", throwIfNotFound: true);
         m_Gameplay_Move = m_Gameplay.FindAction("Move", throwIfNotFound: true);
         m_Gameplay_Rotate = m_Gameplay.FindAction("Rotate", throwIfNotFound: true);
-        m_Gameplay_SceneNext = m_Gameplay.FindAction("SceneNext", throwIfNotFound: true);
-        m_Gameplay_SceneBack = m_Gameplay.FindAction("SceneBack", throwIfNotFound: true);
         // Drone
         m_Drone = asset.FindActionMap("Drone", throwIfNotFound: true);
         m_Drone_Move = m_Drone.FindAction("Move", throwIfNotFound: true);
+        // UI
+        m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
+        m_UI_SceneNext = m_UI.FindAction("SceneNext", throwIfNotFound: true);
+        m_UI_SceneBack = m_UI.FindAction("SceneBack", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -278,8 +288,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     private readonly InputAction m_Gameplay_Grow;
     private readonly InputAction m_Gameplay_Move;
     private readonly InputAction m_Gameplay_Rotate;
-    private readonly InputAction m_Gameplay_SceneNext;
-    private readonly InputAction m_Gameplay_SceneBack;
     public struct GameplayActions
     {
         private @PlayerControls m_Wrapper;
@@ -287,8 +295,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         public InputAction @Grow => m_Wrapper.m_Gameplay_Grow;
         public InputAction @Move => m_Wrapper.m_Gameplay_Move;
         public InputAction @Rotate => m_Wrapper.m_Gameplay_Rotate;
-        public InputAction @SceneNext => m_Wrapper.m_Gameplay_SceneNext;
-        public InputAction @SceneBack => m_Wrapper.m_Gameplay_SceneBack;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -307,12 +313,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Rotate.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnRotate;
                 @Rotate.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnRotate;
                 @Rotate.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnRotate;
-                @SceneNext.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSceneNext;
-                @SceneNext.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSceneNext;
-                @SceneNext.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSceneNext;
-                @SceneBack.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSceneBack;
-                @SceneBack.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSceneBack;
-                @SceneBack.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnSceneBack;
             }
             m_Wrapper.m_GameplayActionsCallbackInterface = instance;
             if (instance != null)
@@ -326,12 +326,6 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Rotate.started += instance.OnRotate;
                 @Rotate.performed += instance.OnRotate;
                 @Rotate.canceled += instance.OnRotate;
-                @SceneNext.started += instance.OnSceneNext;
-                @SceneNext.performed += instance.OnSceneNext;
-                @SceneNext.canceled += instance.OnSceneNext;
-                @SceneBack.started += instance.OnSceneBack;
-                @SceneBack.performed += instance.OnSceneBack;
-                @SceneBack.canceled += instance.OnSceneBack;
             }
         }
     }
@@ -369,16 +363,60 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         }
     }
     public DroneActions @Drone => new DroneActions(this);
+
+    // UI
+    private readonly InputActionMap m_UI;
+    private IUIActions m_UIActionsCallbackInterface;
+    private readonly InputAction m_UI_SceneNext;
+    private readonly InputAction m_UI_SceneBack;
+    public struct UIActions
+    {
+        private @PlayerControls m_Wrapper;
+        public UIActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @SceneNext => m_Wrapper.m_UI_SceneNext;
+        public InputAction @SceneBack => m_Wrapper.m_UI_SceneBack;
+        public InputActionMap Get() { return m_Wrapper.m_UI; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(UIActions set) { return set.Get(); }
+        public void SetCallbacks(IUIActions instance)
+        {
+            if (m_Wrapper.m_UIActionsCallbackInterface != null)
+            {
+                @SceneNext.started -= m_Wrapper.m_UIActionsCallbackInterface.OnSceneNext;
+                @SceneNext.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnSceneNext;
+                @SceneNext.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnSceneNext;
+                @SceneBack.started -= m_Wrapper.m_UIActionsCallbackInterface.OnSceneBack;
+                @SceneBack.performed -= m_Wrapper.m_UIActionsCallbackInterface.OnSceneBack;
+                @SceneBack.canceled -= m_Wrapper.m_UIActionsCallbackInterface.OnSceneBack;
+            }
+            m_Wrapper.m_UIActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @SceneNext.started += instance.OnSceneNext;
+                @SceneNext.performed += instance.OnSceneNext;
+                @SceneNext.canceled += instance.OnSceneNext;
+                @SceneBack.started += instance.OnSceneBack;
+                @SceneBack.performed += instance.OnSceneBack;
+                @SceneBack.canceled += instance.OnSceneBack;
+            }
+        }
+    }
+    public UIActions @UI => new UIActions(this);
     public interface IGameplayActions
     {
         void OnGrow(InputAction.CallbackContext context);
         void OnMove(InputAction.CallbackContext context);
         void OnRotate(InputAction.CallbackContext context);
-        void OnSceneNext(InputAction.CallbackContext context);
-        void OnSceneBack(InputAction.CallbackContext context);
     }
     public interface IDroneActions
     {
         void OnMove(InputAction.CallbackContext context);
+    }
+    public interface IUIActions
+    {
+        void OnSceneNext(InputAction.CallbackContext context);
+        void OnSceneBack(InputAction.CallbackContext context);
     }
 }

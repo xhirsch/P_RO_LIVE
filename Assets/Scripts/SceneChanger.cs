@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
@@ -20,7 +18,6 @@ public class SceneChanger : MonoBehaviour
         if(SceneManager.GetActiveScene().buildIndex < SceneManager.sceneCountInBuildSettings - 1) {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
-        
     }
 
     private void OnSceneBack(InputValue value){
